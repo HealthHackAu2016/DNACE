@@ -35,7 +35,7 @@ Sylvan manage to get a contact in Clovely for the dance mats.
 The other option would be to hack a keyboard:
 
 
-[Link] (http://www.instructables.com/id/Hacking-a-USB-Keyboard/step1/Trace-the-letters-back-to-the-pins/)
+[Link to Hack a Keyboard ⌨️] (http://www.instructables.com/id/Hacking-a-USB-Keyboard/step1/Trace-the-letters-back-to-the-pins/)
 
 ### INTERFACE FUNCTIONALLITY
 
