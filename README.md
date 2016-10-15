@@ -24,7 +24,7 @@ Araitz = Connecting work ;)
 
 https://octicons.github.com/icon/desktop-download
 
-- [ ] MUSIC PRODUCERS
+- [ ] MUSIC PRODUCTION
 
 “Chord” DNA String (human) for each set of 4 letters if first 2 letters are:
 GT
