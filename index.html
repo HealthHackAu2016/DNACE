@@ -70,6 +70,7 @@
         <script src="js/vendor/jquery.transit.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/velocity.js"></script>
+        <script src="js/vendor/jquery.color.js"></script>
         <script src="js/main.js"></script>
 		<script type="text/javascript">
 			var currentGenome, currentPointInGenome, currentLetter, speedLimiter, speedCounter, elements, currentScore, currentMisses;
@@ -149,14 +150,7 @@
 
 			function handleKeypress(letter) {
 				var hitbox = $('.hit-'+letter.toLowerCase());
-
-				//hitbox animation
-				$(hitbox).stop().animate(
-					{left:'-=10', top:'-=10',width:'+=20',height:'+=20'}, 50,
-					function() {
-						$(this).animate({left:'+=10', top:'+=10',width:'-=20',height:'-=20'}, 50);
-					}
-				);
+				var success = false;
 
 				//now map to elements
 				for (i in elements) {
@@ -165,11 +159,22 @@
 						//stop the animation and remove element
 						elem.stop();
 						removeFromElements(elem.get());
-						elem.remove(); //TODO trigger success animation
+						$(elem).stop().animate(
+							{backgroundColor:'green', opacity:0}, 100, function() {this.remove();}
+						);
+						success = true;
 						currentScore++;
 						$('.score > .numbers').html(currentScore);
 					}
 				}
+
+				//hitbox animation
+				var backgroundColor = '#AAA';
+				if (success) backgroundColor = 'green';
+				$(hitbox).stop().animate(
+					{backgroundColor:backgroundColor}, 100,
+					function() {$(this).animate({backgroundColor:'#eee'}, 100);}
+				);
 			}
 
 			function removeFromElements(domElem) {
@@ -211,7 +216,13 @@
 				removeFromElements(elem);
 				currentMisses++;
 				//$('.score > .misses').html('Current Misses: ' + currentMisses); //todo - put in?
-				$(elem).remove();
+
+				$(elem).stop().animate(
+					{backgroundColor:'red', top:'-=20', left:'-=20', width:'+=40', height:'+=40'}, 100,
+					function() {
+						$(this).animate({opacity:0}, 100, function(){ this.remove(); });
+					}
+				);
 			}
 
 			function guid() {
