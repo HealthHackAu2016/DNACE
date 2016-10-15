@@ -1,4 +1,4 @@
-# DNACE
+# DNACE ⚗️🎶
 
 ![Alt Text](http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
 
@@ -22,7 +22,7 @@
 
 ####_Araitz = Connecting work ;)_
 
-### -[ ] DDR VISUALS
+### DDR VISUALS
 
 
 
