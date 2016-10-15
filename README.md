@@ -89,4 +89,35 @@ T = 2nd note (of chord arpeggio)
 A = 3rd note(of chord arpeggio)
 C = Octave/4th note(of chord arpeggio)
 
+Notes(ascending arpeggios) that comprise chords:
+C dim: C, Eb, Gb
+Daug: D, F#, A#
+D#m: D#, F#, A#,
+F#: F#, A#, C#
+F#Aug: F, A, C#
+G#: G#, B#, D#, 
+A#: A#, C, E,
+
+var sub1 = str.substring(4);
+while (str.length >= "0") {
+  var sub = sub1.substring(2);
+    if (sub == "GT" || sub == "GA") {
+      //play Cdim
+    } else if (sub == "GC" || sub == "GG") {
+      //play Daug
+    } else if (sub == "TT" || sub == "TA" || sub == "CT") {
+      //play D#m
+    } else if (sub == "TC" || sub == "TG" || sub == "CA") {
+      //play F#
+    } else if (sub == "AA" || sub == "AC") {
+      //play F#Aug
+    } else if (sub == "AT" || sub == "AG") {
+      //play G#
+    } else {
+      //play A#Aug
+    }
+
+  var str = str.slice(4,str.length);
+}
+
 ![Alt Text](http://bestanimations.com/Music/MirrorBalls/disco-dancing-animated-gif-3.gif)
