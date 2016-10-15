@@ -1,5 +1,7 @@
 # DNACE
 
+https://octicons.github.com/icon/beaker
+
 Problem presented/Challenge: general public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
 
 Solution: Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring people into it.
@@ -14,11 +16,15 @@ Louis & Angela = Music producers. Establish the relationship between the cords a
 
 Araitz = Connecting work ;)
 
-DDR VISUALS
+- [ ] DDR VISUALS
 
-INTERFACE FUNCTIONALLITY
+<span class="mega-octicon octicon-eye"></span>
 
-MUSIC PRODUCERS
+- [ ] INTERFACE FUNCTIONALLITY
+
+https://octicons.github.com/icon/desktop-download
+
+- [ ] MUSIC PRODUCERS
 
 “Chord” DNA String (human) for each set of 4 letters if first 2 letters are:
 GT
@@ -76,3 +82,5 @@ G, then play basenote ( of chord arpeggio)
 T = 2nd note (of chord arpeggio)
 A = 3rd note(of chord arpeggio)
 C = Octave/4th note(of chord arpeggio)
+
+https://octicons.github.com/icon/settings
