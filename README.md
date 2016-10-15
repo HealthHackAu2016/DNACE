@@ -10,6 +10,7 @@ Elise & Sylvain = Creating DDR visuals. Concept: the
 
 James H = Interface functionallity
 
-Louis & Angela = Music producers. Set up the cords according to the base pairs.
+Louis & Angela = Music producers. Establish the relationship between the and the base pairs to create a melody.
 
-Araitz = Connecting work
+Araitz = Connecting work ););
+
