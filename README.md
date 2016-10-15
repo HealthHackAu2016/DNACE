@@ -10,17 +10,17 @@
 
 ![Alt Text] (https://66.media.tumblr.com/b5b8ef183bbf02fc98a3a21d99159dc1/tumblr_nw4yfqxSU71ubphlpo1_400.gif)
 
-###DNACE MEMBERS
+###_DNACE MEMBERS_
 
-####James F = _Problem owner & mentor._
+####_James F = Problem owner & mentor._
 
-####Elise & Sylvain = _Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)._
+####_Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)._
 
-####James H = _Interface functuallity. Xx developing? flow, stream reading and key events._
+####_James H = Interface functuallity. Xx developing? flow, stream reading and key events._
 
-####Louis & Angela = _Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords._
+####_Louis & Angela = _Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords._
 
-####Araitz = _Connecting work ;)_
+####_Araitz = Connecting work ;)_
 
 ### -[ ] DDR VISUALS
 
