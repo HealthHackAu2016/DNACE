@@ -1,8 +1,6 @@
 # DNACE
 
-https://octicons.github.com/icon/beaker
-
-Unicode: f0dd
+![Alt Text](https://pixabay.com/static/uploads/photo/2014/04/02/11/17/flask-305804_960_720.png)
 
 Problem presented/Challenge: general public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
 
@@ -10,7 +8,7 @@ Solution: Provide a DDR (Dance Dance Revolution) experience based on genomics th
 
 James F = Problem owner & mentor
 
-Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats or hacked solutions)
+Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)
 
 James H = Interface functuallity. Xx developing? flow, stream reading and key events.
 
@@ -21,6 +19,10 @@ Araitz = Connecting work ;)
 - [ ] DDR VISUALS
 
 <span class="mega-octicon octicon-eye"></span>
+
+Sylvan manage to get a contact in Clovely for the dance mats.
+
+
 
 - [ ] INTERFACE FUNCTIONALLITY
 
