@@ -12,17 +12,17 @@
 
 ###DNACE MEMBERS
 
-####James F = Problem owner & mentor
+####James F = _Problem owner & mentor._
 
-####Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)
+####Elise & Sylvain = _Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)._
 
-####James H = Interface functuallity. Xx developing? flow, stream reading and key events.
+####James H = _Interface functuallity. Xx developing? flow, stream reading and key events._
 
-####Louis & Angela = Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords.
+####Louis & Angela = _Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords._
 
-####Araitz = Connecting work ;)
+####Araitz = _Connecting work ;)_
 
-### - [ ] DDR VISUALS
+### -[ ] DDR VISUALS
 
 
 
@@ -30,11 +30,11 @@ Sylvan manage to get a contact in Clovely for the dance mats.
 
 ![Alt Text] (https://github.com/HealthHackAu2016/DNACE/blob/master/IMG_0340.PNG?raw=true)
 
-### - [ ] INTERFACE FUNCTIONALLITY
+### -[ ] INTERFACE FUNCTIONALLITY
 
 https://octicons.github.com/icon/desktop-download
 
-### - [ ] MUSIC PRODUCTION
+### -[ ] MUSIC PRODUCTION
 
 “Chord” DNA String (human) for each set of 4 letters if first 2 letters are:
 GT
