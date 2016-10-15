@@ -26,11 +26,16 @@
 
 ### DDR VISUALS 
 
-
+### HARDWARE
 
 Sylvan manage to get a contact in Clovely for the dance mats.
 
 ![Alt Text] (https://github.com/HealthHackAu2016/DNACE/blob/master/IMG_0340.PNG?raw=true)
+
+The other option would be to hack a keyboard:
+
+
+http://www.instructables.com/id/Hacking-a-USB-Keyboard/step2/Trace-the-letters-back-to-the-pins/
 
 ### INTERFACE FUNCTIONALLITY
 
