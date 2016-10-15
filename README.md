@@ -1,6 +1,6 @@
 # DNACE
 
-Problem presented/Challenge: general public doesnt show interest in genomics due to technicisim and lack of basic genomic knowldege.
+Problem presented/Challenge: general public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
 
 Solution: Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring more people into it.
 
