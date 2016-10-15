@@ -21,7 +21,7 @@
 				width:100vw;
 				height:100vh;
 				padding:0 !important;
-				margin-bottom:0 !important;
+				margin:0 !important;
 			}
 			.cols {
 				text-align:center;
@@ -32,7 +32,7 @@
 				display:inline-block;
 				margin-left: 10px;
 				margin-right: 10px;
-				height:95vh;
+				height:100vh;
 			}
 			.block {
 				position:absolute;
@@ -42,7 +42,7 @@
 			}
 			.hit-box {
 				position:absolute;
-				bottom:0;
+				bottom:5vh;
 				text-align: center;
 				width:40px;
 				height:40px;
@@ -50,8 +50,18 @@
 				border:1px solid #000;
 			}
 
-			.score {
+			.sidebar {
+				text-align:center;
+				height:100vh;
+				position:relative;
+			}
+			.score > * {
+				font-size:30px;
+			}
+			.controls {
 				position:absolute;
+				bottom:5vh;
+				width:100%;
 			}
 		</style>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -63,14 +73,16 @@
         <script src="js/main.js"></script>
 		<script type="text/javascript">
 			var currentGenome, currentPointInGenome, currentLetter, speedLimiter, speedCounter, elements, currentScore, currentMisses;
+
 			var gameClock;
+			var gameState;
 
 			var blockHtml = '<div class="block"></div>';
 			var bodyHeight = 0;
 
 			var aKey = 37; //left
-			var gKey = 38; //up
-			var tKey = 39; //right
+			var tKey = 38; //up
+			var gKey = 39; //right
 			var cKey = 40; //down
 			var tolerance = 50; //tolerance in pixels... higher tolerance number is easier
 
@@ -81,7 +93,6 @@
 			function restartGame() {
 				if (gameClock != undefined) {
 					window.clearInterval(gameClock);
-					$('.score').html('');
 					$('body').off();
 					for(i in elements) {
 						elements[i].stop();
@@ -92,8 +103,6 @@
 			}
 
 			function initGame() {
-				console.log('initGame');
-
 				//set init vars here
 				bodyHeight = 0;
 				currentScore = 0;
@@ -105,11 +114,13 @@
 				speedCounter = 0;
 				elements = [];
 
+				//set score
+				$('.score > .numbers').html('0');
+
 				//setup key handlers
 				setupKeyHandlers();
 
 				//TODO add start animation???
-
 				gameClock = window.setInterval(nextTick, 500); //start game loop, run every 100ms
 			}
 
@@ -118,16 +129,12 @@
 					console.log('keypress ' + e.which);
 					if (e.which == aKey) {
 						handleKeypress('A');
-						//TODO trigger hit box animation
 					} else if (e.which == gKey) {
 						handleKeypress('G');
-						//TODO trigger hit box animation
 					} else if (e.which == tKey) {
 						handleKeypress('T');
-						//TODO trigger hit box animation
 					} else if (e.which == cKey) {
 						handleKeypress('C');
-						//TODO trigger hit box animation
 					}
 				});
 			}
@@ -142,6 +149,7 @@
 
 			function handleKeypress(letter) {
 				var hitbox = $('.hit-'+letter.toLowerCase());
+				//hitbox animation
 				for (i in elements) {
 					var elem = elements[i];
 					if (elem.attr('type') == letter && withinTolerance(elem, hitbox)) {
@@ -150,7 +158,7 @@
 						removeFromElements(elem.get());
 						elem.remove(); //TODO trigger success animation
 						currentScore++;
-						$('.score').html(currentScore);
+						$('.score > .numbers').html(currentScore);
 					}
 				}
 			}
@@ -185,11 +193,16 @@
 				$(newBlock).animate({
 				    top:bodyHeight + 'px'
 				}, 5000, function() {
-					removeFromElements(this);
-					//TODO trigger death
-					$(this).remove();
+					handleMiss(this);
 				});
 				elements.push(newBlock); //store it in the master array for easy access later
+			}
+
+			function handleMiss(elem) {
+				removeFromElements(elem);
+				currentMisses++;
+				//$('.score > .misses').html('Current Misses: ' + currentMisses); //todo - put in?
+				$(elem).remove();
 			}
 
 			function guid() {
@@ -208,29 +221,36 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="jumbotron">
-	  <div class="playarea">
-		  <div class="cols">
-			  <div class="col-a">
-				  <div class="hit-a hit-box" onclick="handleKeypress('A')">A</div>
+		<div class="container-fluid">
+		  <div class="playarea col-xs-8">
+			  <div class="cols">
+				  <div class="col-a">
+					  <div class="hit-a hit-box" onclick="handleKeypress('A')">A</div>
+				  </div>
+				  <div class="col-t">
+				  	  <div class="hit-t hit-box" onclick="handleKeypress('T')">T</div>
+			  	  </div>
+				  <div class="col-g">
+					  <div class="hit-g hit-box" onclick="handleKeypress('G')">G</div>
+				  </div>
+				  <div class="col-c">
+				  	  <div class="hit-c hit-box" onclick="handleKeypress('C')">C</div>
+				  </div>
 			  </div>
-			  <div class="col-t">
-			  	  <div class="hit-t hit-box" onclick="handleKeypress('T')">T</div>
+		  </div>
+		  <div class="sidebar col-xs-4">
+			  <div class="title">
+				  <h1>DNACE</h1>
+			  </div>
+		  	  <div class="score">
+				  <div class="numbers"></div>
+				  <div class="misses"></div>
 		  	  </div>
-			  <div class="col-g">
-				  <div class="hit-g hit-box" onclick="handleKeypress('G')">G</div>
-			  </div>
-			  <div class="col-c">
-			  	  <div class="hit-c hit-box" onclick="handleKeypress('C')">C</div>
+			  <div class="controls">
+				  <button class="restart" onclick="restartGame()">Restart</button>
 			  </div>
 		  </div>
-	  </div>
-	  <div class="sidebar">
-	  	  <div class="score">
-	  	  </div>
-		  <div class="controls">
-			  <button class="restart" onclick="restartGame()">Restart</button>
-		  </div>
-	  </div>
+  		</div>
     </div>
 		<!-- /container -->
     </body>
