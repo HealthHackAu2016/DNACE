@@ -1,0 +1,130 @@
+html, body {
+	overflow: hidden;
+	color:#FFF;
+}
+button {
+	background-color: transparent;
+	appearance:none;
+	-webkit-appearance:none;
+	border:1px solid #FFF;
+}
+
+.jumbotron {
+	width:100vw;
+	height:100vh;
+	padding:0 !important;
+	margin:0 !important;
+	background-color:#000;
+}
+.cols {
+	text-align:center;
+	position:relative;
+}
+.cols > * {
+	display:inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	height:100vh;
+}
+.cols > *, .block, .hit-box {
+	width:60px;
+}
+.playarea .block, .hit-box {
+	height:60px;
+	padding:15px;
+	font-size:20px;
+}
+.playarea .block {
+	position:absolute;
+	top:-80px;
+	color:rgba(255,255,255,0.5);
+	font-weight:bold;
+}
+/* COLORS: 23F0C7, 6457A6, 9DACFF, 76E5FC, 4BC0D9 */
+.block[type=A] {
+	background-color:#23F0C7;
+}
+.block[type=T] {
+	background-color:#6457A6;
+}
+.block[type=G] {
+	background-color:#76E5FC;
+}
+.block[type=C] {
+	background-color:#9DACFF;
+}
+.hit-box {
+	position:absolute;
+	bottom:5vh;
+	text-align: center;
+	border:1px solid #FFF;
+	z-index: 1000;
+	background-position: center center;
+	background-size: 80%;
+	text-indent:-9999px;
+	background-repeat: no-repeat;
+}
+.hit-box.hit-a {
+	background-image:url('../img/left.png');
+}
+.hit-box.hit-t {
+	background-image:url('../img/up.png');
+}
+.hit-box.hit-g {
+	background-image:url('../img/down.png');
+}
+.hit-box.hit-c {
+	background-image:url('../img/right.png');
+}
+
+.sidebar {
+	text-align:center;
+	height:100vh;
+	position:relative;
+}
+.score {
+	margin-top:20px;
+}
+.score > * {
+}
+
+.sidebar .block {
+	float:left;
+	position:relative;
+	top:0;
+}
+.sidebar .misses .block {
+	background-color:#444;
+	border:1px solid #000;
+	height:40px;
+	width:16.666666666%;
+}
+.sidebar .numbers {
+	position:relative;
+	width:100%;
+	background-color:#444;
+	color:#FFF;
+	font-size:30px;
+	font-weight:bold;
+	border:1px solid #000;
+	margin-top:10px;
+	float:left;
+	border-bottom:none;
+}
+.sidebar .code {
+	border:1px solid #000;
+}
+.sidebar .code .block {
+	border:1px solid #000;
+	height:40px;
+	width:16.666666666%;
+	font-size:14px;
+}
+
+.controls {
+	position:absolute;
+	bottom:5vh;
+	width:100%;
+	left:10px;
+	right:10px;
+}

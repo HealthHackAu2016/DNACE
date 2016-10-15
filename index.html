@@ -13,82 +13,6 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-		<style>
-			html, body {
-				overflow: hidden;
-				color:#FFF;
-			}
-			button {
-				background-color: transparent;
-				appearance:none;
-				-webkit-appearance:none;
-				border:1px solid #FFF;
-			}
-
-			.jumbotron {
-				width:100vw;
-				height:100vh;
-				padding:0 !important;
-				margin:0 !important;
-				background-color:#000;
-			}
-			.cols {
-				text-align:center;
-				position:relative;
-			}
-			.cols > * {
-				display:inline-block;
-				margin-left: 10px;
-				margin-right: 10px;
-				height:100vh;
-			}
-			.cols > *, .block, .hit-box {
-				width:60px;
-			}
-			.block, .hit-box {
-				height:60px;
-				padding:15px;
-				font-size:20px;
-			}
-			.block {
-				position:absolute;
-				top:-80px;
-			}
-			/* COLORS: 23F0C7, 6457A6, 9DACFF, 76E5FC, 4BC0D9 */
-			.block[type=A] {
-				background-color:#23F0C7;
-			}
-			.block[type=T] {
-				background-color:#6457A6;
-			}
-			.block[type=G] {
-				background-color:#76E5FC;
-			}
-			.block[type=C] {
-				background-color:#9DACFF;
-			}
-			.hit-box {
-				position:absolute;
-				bottom:5vh;
-				text-align: center;
-				border:1px solid #FFF;
-				z-index: 1000;
-			}
-
-			.sidebar {
-				text-align:center;
-				height:100vh;
-				position:relative;
-			}
-			.score > * {
-				font-size:30px;
-			}
-			.controls {
-				position:absolute;
-				bottom:5vh;
-				width:100%;
-			}
-		</style>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -104,7 +28,6 @@
 			var gameClock;
 			var gameState;
 
-			var blockHtml = '<div class="block"></div>';
 			var bodyHeight = 0;
 
 			var aKey = 37; //left
@@ -152,7 +75,7 @@
 				elements = [];
 
 				//set score
-				$('.score > .numbers').html('0');
+				$('.score .numbers').html('0');
 
 				//setup key handlers
 				setupKeyHandlers();
@@ -190,19 +113,22 @@
 				var hitbox = $('.hit-'+letter.toLowerCase());
 				var success = false;
 
-				//now map to elements
+				//check for successful hit
 				for (i in elements) {
 					var elem = elements[i];
 					if (elem.attr('type') == letter && withinTolerance(elem, hitbox)) {
+
+						success = true;
+						currentScore++;
+						$('.score .numbers').html(currentScore);
+
 						//stop the animation and remove element
 						elem.stop();
 						removeFromElements(elem.get());
 						$(elem).stop().animate(
 							{backgroundColor:'green', opacity:0}, 100, function() {this.remove();}
 						);
-						success = true;
-						currentScore++;
-						$('.score > .numbers').html(currentScore);
+
 						createjs.Sound.play('good');
 					}
 				}
@@ -225,6 +151,10 @@
 				}
 			}
 
+			function getBlockHtmlForLetter(letter) {
+				return '<div id="'+guid()+'" class="block" type="'+letter+'">'+letter+'</div>';
+			}
+
 			function nextTick() {
 				//TODO check the speed limiter/counter to generate blocks
 
@@ -238,9 +168,7 @@
 
 				//generate the block and animate downwards
 				var bodyHeight = $('body').height();
-				var newBlock = $(blockHtml);
-				$(newBlock).attr('id',guid());
-				$(newBlock).attr('type',currentLetter);
+				var newBlock = $(getBlockHtmlForLetter(currentLetter));
 				$('.col-'+currentLetter.toLowerCase()).append(newBlock);
 				$(newBlock).animate({
 				    top:bodyHeight + 'px'
@@ -277,6 +205,10 @@
 			    return uuid;
 			};
 
+			function toggleSound() {
+
+			}
+
 		</script>
     </head>
     <body>
@@ -306,10 +238,20 @@
 				  <h1>DNACE</h1>
 			  </div>
 			  <div class="message">
+				  Ready to sequence
 			  </div>
 		  	  <div class="score">
-				  <div class="numbers"></div>
-				  <div class="misses"></div>
+	  	  		  <div class="misses">
+					  <div class="block inactive"></div>
+					  <div class="block inactive"></div>
+					  <div class="block inactive"></div>
+					  <div class="block inactive"></div>
+					  <div class="block inactive"></div>
+					  <div class="block inactive"></div>
+				  </div>
+				  <div class="numbers">0</div>
+				  <div class="code">
+				  </div>
 		  	  </div>
 			  <div class="controls">
 				  <button class="restart" onclick="restartGame()">Restart</button>
