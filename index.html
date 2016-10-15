@@ -50,6 +50,10 @@
 				padding:10px;
 				border:1px solid #000;
 			}
+
+			.score {
+				position:absolute;
+			}
 		</style>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -66,13 +70,82 @@
 			var speedCounter = 0;
 			var elements = [];
 
+			var currentScore = 0;
+
 			var blockHtml = '<div class="block"></div>';
 			var bodyHeight = 0;
 
+			var aKey = 37; //left
+			var gKey = 38; //up
+			var tKey = 39; //right
+			var cKey = 40; //down
+			var tolerance = 50; //tolerance in pixels... higher tolerance number is easier
+
 			$(document).ready( function() {
-				//TODO set dom vars here
-				window.setInterval(nextTick, 500); //start game loop, run every 100ms
+				initGame();
 			});
+
+			function initGame() {
+				//TODO set dom vars here
+				console.log('initGame');
+
+				//setup key handlers
+				setupKeyHandlers();
+
+				window.setInterval(nextTick, 500); //start game loop, run every 100ms
+			}
+
+			function setupKeyHandlers() {
+				$('body').keyup(function(e) {
+					console.log('keypress ' + e.which);
+					if (e.which == aKey) {
+						handleKeypress('A');
+						//TODO trigger hit box animation
+					} else if (e.which == gKey) {
+						handleKeypress('G');
+						//TODO trigger hit box animation
+					} else if (e.which == tKey) {
+						handleKeypress('T');
+						//TODO trigger hit box animation
+					} else if (e.which == cKey) {
+						handleKeypress('C');
+						//TODO trigger hit box animation
+					}
+				});
+			}
+
+			function withinTolerance(elem, hitbox) {
+				var diff = hitbox.position().top - elem.position().top;
+				console.log(diff);
+				if ( tolerance > diff && diff < tolerance) {
+					return true;
+				} else return false;
+			}
+
+			function handleKeypress(letter) {
+				console.log('handleKeypress: ' + letter);
+				var hitbox = $('.hit-'+letter.toLowerCase());
+				for (i in elements) {
+					var elem = elements[i];
+					if (elem.attr('type') == letter && withinTolerance(elem, hitbox)) {
+						//stop the animation and remove element
+						elem.stop();
+						//remove from elements array
+						for (i in elements) {
+							if (elements[i].attr('id') == $(this).attr('id')) {
+								elements.splice(i,1);
+								break;
+							}
+						}
+						//TODO trigger success animation
+						elem.remove();
+
+						//record a successful sequence in the score
+						currentScore++;
+						$('.score').html(currentScore);
+					}
+				}
+			}
 
 			function nextTick() {
 				//TODO check the speed limiter/counter to generate blocks
@@ -94,7 +167,7 @@
 				$('.col-'+currentLetter.toLowerCase()).append(newBlock);
 				$(newBlock).animate({
 				    top:bodyHeight + 'px'
-				}, 1000, function() {
+				}, 5000, function() {
 					//remove from elements array
 					for (i in elements) {
 						if (elements[i].attr('id') == $(this).attr('id')) {
@@ -125,7 +198,6 @@
         <![endif]-->
     <div class="jumbotron">
 	  <div class="score">
-		  <div class="score-attack"></div>
 	  </div>
 	  <div class="playarea">
 		  <div class="cols">
