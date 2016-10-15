@@ -89,4 +89,4 @@ T = 2nd note (of chord arpeggio)
 A = 3rd note(of chord arpeggio)
 C = Octave/4th note(of chord arpeggio)
 
-![Alt Text](https://github.com/HealthHackAu2016/DNACE/blob/master/IMG_0340.PNG?raw=true)
+![Alt Text](http://bestanimations.com/Music/MirrorBalls/disco-dancing-animated-gif-3.gif)
