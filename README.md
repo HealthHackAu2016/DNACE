@@ -2,21 +2,23 @@
 
 ![Alt Text](http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
 
-####Problem presented/Challenge: general public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
+###Problem presented/Challenge: 
+####General public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
 
-####Solution: Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring people into it.
+###Solution: 
+####Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring people into it.
 
 ![Alt Text] (https://66.media.tumblr.com/b5b8ef183bbf02fc98a3a21d99159dc1/tumblr_nw4yfqxSU71ubphlpo1_400.gif)
 
-James F = Problem owner & mentor
+####James F = Problem owner & mentor
 
-Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)
+####Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)
 
-James H = Interface functuallity. Xx developing? flow, stream reading and key events.
+####James H = Interface functuallity. Xx developing? flow, stream reading and key events.
 
-Louis & Angela = Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords.
+####Louis & Angela = Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords.
 
-Araitz = Connecting work ;)
+####Araitz = Connecting work ;)
 
 - [ ] DDR VISUALS
 
