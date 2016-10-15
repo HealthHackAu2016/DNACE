@@ -75,16 +75,18 @@
 			var tolerance = 50; //tolerance in pixels... higher tolerance number is easier
 
 			$(document).ready( function() {
-				initGame();
+				restartGame();
 			});
 
 			function restartGame() {
-				window.clearInterval(gameClock);
-				$('.score').html('');
-				$('body').off();
-				for(i in elements) {
-					elements[i].stop();
-					elements[i].remove();
+				if (gameClock != undefined) {
+					window.clearInterval(gameClock);
+					$('.score').html('');
+					$('body').off();
+					for(i in elements) {
+						elements[i].stop();
+						elements[i].remove();
+					}
 				}
 				initGame();
 			}
@@ -145,11 +147,8 @@
 					if (elem.attr('type') == letter && withinTolerance(elem, hitbox)) {
 						//stop the animation and remove element
 						elem.stop();
-						removeFromElements(elem);
-						//TODO trigger success animation
-						elem.remove();
-
-						//record a successful sequence in the score
+						removeFromElements(elem.get());
+						elem.remove(); //TODO trigger success animation
 						currentScore++;
 						$('.score').html(currentScore);
 					}
@@ -186,7 +185,7 @@
 				$(newBlock).animate({
 				    top:bodyHeight + 'px'
 				}, 5000, function() {
-					removeFromElements(elements[i].get());
+					removeFromElements(this);
 					//TODO trigger death
 					$(this).remove();
 				});
@@ -212,16 +211,16 @@
 	  <div class="playarea">
 		  <div class="cols">
 			  <div class="col-a">
-				  <div class="hit-a hit-box">A</div>
+				  <div class="hit-a hit-box" onclick="handleKeypress('A')">A</div>
 			  </div>
 			  <div class="col-t">
-			  	  <div class="hit-t hit-box">T</div>
+			  	  <div class="hit-t hit-box" onclick="handleKeypress('T')">T</div>
 		  	  </div>
 			  <div class="col-g">
-				  <div class="hit-g hit-box">G</div>
+				  <div class="hit-g hit-box" onclick="handleKeypress('G')">G</div>
 			  </div>
 			  <div class="col-c">
-			  	  <div class="hit-c hit-box">C</div>
+			  	  <div class="hit-c hit-box" onclick="handleKeypress('C')">C</div>
 			  </div>
 		  </div>
 	  </div>
