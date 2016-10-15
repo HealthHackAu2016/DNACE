@@ -93,9 +93,14 @@
 				createjs.Sound.registerSound("assets/gamestart.mp3", "gamestart");
 				createjs.Sound.registerSound("assets/good.mp3", "good");
 				createjs.Sound.registerSound("assets/bad.mp3", "bad");
-				//createjs.Sound.registerSound("assets/thunder.mp3", "win");
-				//createjs.Sound.registerSound("assets/thunder.mp3", "lose");
-				restartGame();
+				createjs.Sound.registerSound("assets/a.mp3", "a");
+				createjs.Sound.registerSound("assets/g.mp3", "g");
+				createjs.Sound.registerSound("assets/t.mp3", "t");
+				createjs.Sound.registerSound("assets/c.mp3", "c");
+				//createjs.Sound.registerSound("assets/win.mp3", "win");
+				//createjs.Sound.registerSound("assets/lost.mp3", "lose");
+
+				//restartGame();
 			});
 
 			function restartGame() {
@@ -220,6 +225,8 @@
 					handleMiss(this);
 				});
 				elements.push(newBlock); //store it in the master array for easy access later
+
+				createjs.Sound.play(currentLetter.toLowerCase());
 			}
 
 			function handleMiss(elem) {
