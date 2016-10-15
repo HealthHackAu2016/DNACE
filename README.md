@@ -6,7 +6,7 @@ Solution: Provide a DDR (Dance Dance Revolution) experience based on genomics th
 
 James F = Problem owner & mentor
 
-Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats or hacked solution)
+Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats or hacked solutions)
 
 James H = Interface functuallity. Xx developing? flow, stream reading and key events.
 
@@ -14,3 +14,8 @@ Louis & Angela = Music producers. Establish the relationship between the cords a
 
 Araitz = Connecting work ;)
 
+DDR VISUALS
+
+INTERFACE FUNCTIONALLITY
+
+MUSIC PRODUCERS
