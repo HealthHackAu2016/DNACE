@@ -24,7 +24,7 @@ Araitz = Connecting work ;)
 
 Sylvan manage to get a contact in Clovely for the dance mats.
 
-
+![Alt Text] (https://github.com/HealthHackAu2016/DNACE/commit/7a218d5c1fde07385f7907c964003426305a4936)
 
 - [ ] INTERFACE FUNCTIONALLITY
 
