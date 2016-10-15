@@ -20,14 +20,7 @@ INTERFACE FUNCTIONALLITY
 
 MUSIC PRODUCERS
 
-
-better:
-“Chord” DNA String (human)
-
-
-for each set of 4 letters 
-
-if first 2 letters are:
+“Chord” DNA String (human) for each set of 4 letters if first 2 letters are:
 GT
 GA
 then play Cdim
@@ -64,10 +57,8 @@ CC
 CG
 Then play: A#aug
 
-“melodic” DNA string
-embedded if for a different string input, based on each above chord  
-Melodic string
-for each 4 letters
+“melodic” DNA string embedded if for a different string input, based on each above chord  
+Melodic string for each 4 letters
 if
 G= base note (of chord arpeggio)
 if
