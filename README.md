@@ -1,24 +1,24 @@
-# DNACE ⚗️🎶
+# 🎶⚗️🤗🖲DNACE🖲🤗 ⚗️🎶
 
 ![Alt Text](http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
 
-###CHALLENGE TO BE SOLVED: 
+###CHALLENGE TO BE SOLVED🤔: 
 ####General public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
 
-###SOLUTION: 
+###SOLUTION💡: 
 ####Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring people into it.
 
 ![Alt Text] (https://66.media.tumblr.com/b5b8ef183bbf02fc98a3a21d99159dc1/tumblr_nw4yfqxSU71ubphlpo1_400.gif)
 
 ###_DNACE MEMBERS_
 
-####_James F = Problem owner & mentor._
+####_🤓James F = Problem owner & mentor 🤓_
 
-####_Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)._
+####_👀Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats)👀_
 
-####_James H = Interface functuallity. Xx developing? flow, stream reading and key events._
+####_💻James H = Interface functuallity. Xx developing? flow, stream reading and key events💻_
 
-####_Louis & Angela = _Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords._
+####_🎶Louis & Angela = _Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords🎶_
 
 ####_Araitz = Connecting work ;)_
 
