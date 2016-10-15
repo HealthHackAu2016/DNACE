@@ -26,14 +26,13 @@
 			.cols {
 				text-align:center;
 				position:relative;
-				height:99vh;
 			}
 			.cols > * {
 				width:40px;
 				display:inline-block;
 				margin-left: 10px;
 				margin-right: 10px;
-				height:100vh;
+				height:95vh;
 			}
 			.block {
 				position:absolute;
@@ -63,14 +62,8 @@
         <script src="js/vendor/velocity.js"></script>
         <script src="js/main.js"></script>
 		<script type="text/javascript">
-			var currentGenome = 'AGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTC';
-			var currentPointInGenome = 0;
-			var currentLetter = '';
-			var speedLimiter = 10;
-			var speedCounter = 0;
-			var elements = [];
-
-			var currentScore = 0;
+			var currentGenome, currentPointInGenome, currentLetter, speedLimiter, speedCounter, elements, currentScore, currentMisses;
+			var gameClock;
 
 			var blockHtml = '<div class="block"></div>';
 			var bodyHeight = 0;
@@ -85,14 +78,37 @@
 				initGame();
 			});
 
+			function restartGame() {
+				window.clearInterval(gameClock);
+				$('.score').html('');
+				$('body').off();
+				for(i in elements) {
+					elements[i].stop();
+					elements[i].remove();
+				}
+				initGame();
+			}
+
 			function initGame() {
-				//TODO set dom vars here
 				console.log('initGame');
+
+				//set init vars here
+				bodyHeight = 0;
+				currentScore = 0;
+				currentMisses = 0;
+				currentGenome = 'AGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTC';
+				currentPointInGenome = 0;
+				currentLetter = '';
+				speedLimiter = 10;
+				speedCounter = 0;
+				elements = [];
 
 				//setup key handlers
 				setupKeyHandlers();
 
-				window.setInterval(nextTick, 500); //start game loop, run every 100ms
+				//TODO add start animation???
+
+				gameClock = window.setInterval(nextTick, 500); //start game loop, run every 100ms
 			}
 
 			function setupKeyHandlers() {
@@ -123,26 +139,28 @@
 			}
 
 			function handleKeypress(letter) {
-				console.log('handleKeypress: ' + letter);
 				var hitbox = $('.hit-'+letter.toLowerCase());
 				for (i in elements) {
 					var elem = elements[i];
 					if (elem.attr('type') == letter && withinTolerance(elem, hitbox)) {
 						//stop the animation and remove element
 						elem.stop();
-						//remove from elements array
-						for (i in elements) {
-							if (elements[i].attr('id') == $(this).attr('id')) {
-								elements.splice(i,1);
-								break;
-							}
-						}
+						removeFromElements(elem);
 						//TODO trigger success animation
 						elem.remove();
 
 						//record a successful sequence in the score
 						currentScore++;
 						$('.score').html(currentScore);
+					}
+				}
+			}
+
+			function removeFromElements(domElem) {
+				for (i in elements) {
+					if (elements[i].attr('id') == $(domElem).attr('id')) {
+						elements.splice(i,1);
+						break;
 					}
 				}
 			}
@@ -162,20 +180,14 @@
 				var bodyHeight = $('body').height();
 				var uuid = guid();
 				var newBlock = $(blockHtml);
-				$(newBlock).attr('id',newBlock); //TODO need to put these into one spreadsheet, its too unwieldy
+				$(newBlock).attr('id',newBlock);
 				$(newBlock).attr('type',currentLetter);
 				$('.col-'+currentLetter.toLowerCase()).append(newBlock);
 				$(newBlock).animate({
 				    top:bodyHeight + 'px'
 				}, 5000, function() {
-					//remove from elements array
-					for (i in elements) {
-						if (elements[i].attr('id') == $(this).attr('id')) {
-							elements.splice(i,1);
-							break;
-						}
-					}
-					//trigger death
+					removeFromElements(elements[i].get());
+					//TODO trigger death
 					$(this).remove();
 				});
 				elements.push(newBlock); //store it in the master array for easy access later
@@ -197,8 +209,6 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="jumbotron">
-	  <div class="score">
-	  </div>
 	  <div class="playarea">
 		  <div class="cols">
 			  <div class="col-a">
@@ -215,7 +225,12 @@
 			  </div>
 		  </div>
 	  </div>
-	  <div class="controls">
+	  <div class="sidebar">
+	  	  <div class="score">
+	  	  </div>
+		  <div class="controls">
+			  <button class="restart" onclick="restartGame()">Restart</button>
+		  </div>
 	  </div>
     </div>
 		<!-- /container -->
