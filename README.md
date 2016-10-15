@@ -18,8 +18,7 @@ Araitz = Connecting work ;)
 
 - [ ] DDR VISUALS
 
-
-https://octicons.github.com/icon/eye
+<span class="mega-octicon octicon-eye"></span>
 
 - [ ] INTERFACE FUNCTIONALLITY
 
