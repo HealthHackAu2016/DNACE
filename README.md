@@ -20,7 +20,7 @@
 
 ####Araitz = Connecting work ;)
 
-- [ ] DDR VISUALS
+###- [ ] DDR VISUALS
 
 
 
@@ -28,11 +28,11 @@ Sylvan manage to get a contact in Clovely for the dance mats.
 
 ![Alt Text] (https://github.com/HealthHackAu2016/DNACE/blob/master/IMG_0340.PNG?raw=true)
 
-- [ ] INTERFACE FUNCTIONALLITY
+###- [ ] INTERFACE FUNCTIONALLITY
 
 https://octicons.github.com/icon/desktop-download
 
-- [ ] MUSIC PRODUCTION
+###- [ ] MUSIC PRODUCTION
 
 “Chord” DNA String (human) for each set of 4 letters if first 2 letters are:
 GT
