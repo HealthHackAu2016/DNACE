@@ -1,0 +1,286 @@
+/*
+* if bloom is not enough, check these out http://ianlunn.github.io/Hover/
+*/
+
+.bloom-two-wheels {
+	position:relative;
+}
+.bloom-two-wheels > * {
+	background-color:blue;
+	border:1px solid #FFF;
+	border-radius:5px;
+}
+.bloom-two-wheels .frame {
+	position:absolute;
+	top:0;
+	left:10px;
+	width:40px;
+	height:40px;
+}
+.bloom-two-wheels .wheel-one {
+	position:absolute;
+	top:30px;
+	left:0;
+	width:20px;
+	height:20px;
+}
+.bloom-two-wheels .wheel-two {
+	position:absolute;
+	top:30px;
+	left:40px;
+	width:20px;
+	height:20px;
+}
+.bloom-play .bloom-two-wheels .wheel-one, .bloom-play .bloom-two-wheels .wheel-two {
+	animation:spin 4s linear infinite;
+}
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
+.bloom-cloud {
+	position:relative;
+	overflow: hidden;
+	min-height:50px;
+}
+.bloom-cloud > * {
+	background-color:green;
+	border:1px solid #FFF;
+	border-radius:5px;
+}
+.bloom-cloud .cloud-one, .bloom-cloud .cloud-two {
+	position: absolute;
+	width:20%;
+	height:20px;
+}
+.bloom-cloud .cloud-two {
+	top:20px;
+}
+.bloom-play .bloom-cloud .cloud-one {
+	animation:cloud 4s linear infinite;
+}
+.bloom-play .bloom-cloud .cloud-two {
+	top:20px;
+	animation:cloud 10s linear infinite;
+}
+@keyframes cloud { 0% { left: -20%; } 100% { left: 120%; } }
+
+
+/*
+Read
+http://www.useragentman.com/blog/2013/03/03/animating-circular-paths-using-css3-transitions/
+and
+https://subvisual.co/blog/posts/62-perfecting-a-css-3d-animation
+*/
+.bloom-orbit {
+	position:relative;
+	overflow: hidden;
+	min-height:200px;
+}
+.bloom-orbit .orbiter {
+	position:absolute;
+	width:30px;
+	height:30px;
+	border-radius:10px;
+	left: 80px;
+	top:80px;
+	background-color:red;
+	border:1px solid #FFF;
+}
+.bloom-play .bloom-orbit .orbiter {
+	animation: orbit 4s linear infinite;
+}
+@keyframes orbit {
+	from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+	to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+.bloom-bg {
+	background-color:purple;
+	min-height:150px;
+	position:relative;
+	overflow: hidden;
+	border-radius:2px;
+}
+.bloom-bg .screen {
+	background-color:rgba(255,255,255,0.5);
+	height:100%;
+	position:absolute;
+	width:50%;
+	left:50%;
+	top:0;
+}
+.bloom-play .bloom-bg .screen {
+	animation: screen 4s linear infinite;
+}
+@keyframes screen {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(40%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.bloom-float .floater {
+	background-color:pink;
+	width:30px;
+	height:30px;
+	border:1px solid #FFF;
+	border-radius:10px;
+}
+.bloom-play .bloom-float .floater {
+	animation: float 4s linear infinite;
+}
+@keyframes float {
+	0% {
+		transform: translateY(10px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}
+
+.bloom-stack {
+}
+.bloom-stack > * {
+	position:absolute;
+	background-color:#FFF;
+	box-shadow: 0 0 5px #000;
+	width:50px;
+	height:50px;
+	border-radius:1px;
+}
+.bloom-stack .stack-one {
+	transform: rotate(0deg);
+}
+.bloom-stack .stack-two {
+	transform: rotate(10deg);
+}
+.bloom-stack .stack-three {
+	transform: rotate(20deg);
+}
+.bloom-stack .stack-four {
+	transform: rotate(30deg);
+}
+.bloom-play .bloom-stack .stack-one {
+	animation: stack-one 8s linear infinite;
+}
+.bloom-play .bloom-stack .stack-two {
+	animation: stack-two 8s linear infinite;
+}
+.bloom-play .bloom-stack .stack-three {
+	animation: stack-three 8s linear infinite;
+}
+.bloom-play .bloom-stack .stack-four {
+	animation: stack-four 8s linear infinite;
+}
+@keyframes stack-one {
+	0% {
+		opacity:0;
+	}
+	25% {
+		opacity:1;
+	}
+}
+@keyframes stack-two {
+	0% {
+		opacity:0;
+	}
+	25% {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+}
+@keyframes stack-three {
+	0% {
+		opacity:0;
+	}
+	50% {
+		opacity:0;
+	}
+	75% {
+		opacity:1;
+	}
+}
+@keyframes stack-four {
+	0% {
+		opacity:0;
+	}
+	75% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+.bloom-flytrap {
+	position:relative;
+}
+.bloom-flytrap .fly {
+	position:absolute;
+	width:20px;
+	height:20px;
+	background-color:black;
+	border-radius:4px;
+	border:1px solid #FFF;
+}
+.bloom-play .bloom-flytrap .fly {
+	animation: fly-in-trap 2s linear infinite;
+}
+.bloom-flytrap .trap-top {
+	position:absolute;
+	top:60px;
+	left:60px;
+	width:60px;
+	height:20px;
+	background-color:black;
+	border-radius:10px;
+	transform-origin: 60px 10px;
+}
+.bloom-play .bloom-flytrap .trap-top {
+	animation: trap-top 2s linear infinite;
+}
+.bloom-flytrap .trap-bottom {
+	position:absolute;
+	top:65px;
+	left:60px;
+	width:60px;
+	height:60px;
+	background-color:black;
+	border-radius:10px;
+}
+@keyframes fly-in-trap {
+	from { left:0px; top:0px;}
+	to   { left:80px; top:60px; }
+}
+@keyframes trap-top {
+	0% { transform: rotate(0deg); }
+	50%   { transform: rotate(90deg); }
+	100%   { transform: rotate(0deg); }
+}
+
+.bloom-wind .blowing {
+	width:70px;
+	height:70px;
+	background-color:orange;
+	border:1px solid #FFF;
+	box-shadow:0 0 5px #000;
+	transform-origin: 0 35px;
+}
+.bloom-play .bloom-wind .blowing {
+	animation: blowing 2s linear infinite;
+}
+@keyframes blowing {
+	0% { transform: rotate3d(0,1,0,0deg); }
+	33%   { transform: rotate3d(0,1,0,40deg); }
+	66%   { transform: rotate3d(0,1,0,-40deg); }
+	100% { transform: rotate3d(0,1,0,0deg); }
+}
