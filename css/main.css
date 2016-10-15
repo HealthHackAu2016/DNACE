@@ -115,10 +115,15 @@ button {
 	border:1px solid #000;
 }
 .sidebar .code .block {
-	border:1px solid #000;
 	height:40px;
 	width:16.666666666%;
-	font-size:14px;
+	font-size:20px;
+	padding-top:6px;
+	padding-bottom:6px;
+	color:rgba(255,255,255,0.5);
+}
+.sidebar .code .error {
+	background-color:red;
 }
 
 .controls {

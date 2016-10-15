@@ -23,6 +23,11 @@
         <script src="js/main.js"></script>
 		<script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
 		<script type="text/javascript">
+
+			var genomes = {
+				genome1:'AGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTC'
+			};
+
 			var currentGenome, currentPointInGenome, currentLetter, speedLimiter, speedCounter, elements, currentScore, currentMisses;
 
 			var gameClock;
@@ -35,6 +40,7 @@
 			var gKey = 40; //right
 			var cKey = 39; //down
 			var tolerance = 50; //tolerance in pixels... higher tolerance number is easier
+			var codeLimit = 3*6;
 
 			$(document).ready( function() {
 				//load assets
@@ -50,7 +56,7 @@
 				//restartGame();
 			});
 
-			function restartGame() {
+			function killGame() {
 				if (gameClock != undefined) {
 					window.clearInterval(gameClock);
 					$('body').off();
@@ -58,16 +64,23 @@
 						elements[i].stop();
 						elements[i].remove();
 					}
+					createjs.Sound.stop();
+					//TODO play fail here...
+					$('.message').html('Too many errors - restart');
 				}
-				initGame();
 			}
 
-			function initGame() {
+			function restartGame(genome) {
+				killGame();
+				initGame(genome);
+			}
+
+			function initGame(genome) {
 				//set init vars here
 				bodyHeight = 0;
 				currentScore = 0;
 				currentMisses = 0;
-				currentGenome = 'AGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTCAGTC';
+				currentGenome = genomes[genome];
 				currentPointInGenome = 0;
 				currentLetter = '';
 				speedLimiter = 10;
@@ -76,6 +89,9 @@
 
 				//set score
 				$('.score .numbers').html('0');
+				$('.score .code').empty();
+				$('.score .misses .block').animate({backgroundColor:'#444'});
+				$('.message').html('Sequencing...');
 
 				//setup key handlers
 				setupKeyHandlers();
@@ -121,6 +137,13 @@
 						success = true;
 						currentScore++;
 						$('.score .numbers').html(currentScore);
+
+						var scoreBlock = elem.clone();
+						scoreBlock.attr('id',guid()); //reset the guid to prevent mixup...
+						scoreBlock.css({top:'auto'}); //reset the guid to prevent mixup...
+						var code = $('.score .code');
+						code.prepend(scoreBlock);
+						if (code.children().length > codeLimit) code.children().last().remove();
 
 						//stop the animation and remove element
 						elem.stop();
@@ -182,15 +205,23 @@
 
 			function handleMiss(elem) {
 				removeFromElements(elem);
-				currentMisses++;
-				//$('.score > .misses').html('Current Misses: ' + currentMisses); //todo - put in?
-
 				$(elem).stop().animate(
 					{backgroundColor:'red', top:'-=20', left:'-=20', width:'+=40', height:'+=40'}, 100,
 					function() {
 						$(this).animate({opacity:0}, 100, function(){ this.remove(); });
 					}
 				);
+
+				currentMisses++;
+				if (currentMisses < 7) {
+					$('.misses .block:nth-child('+currentMisses+')').animate({backgroundColor:'red'});
+					var missBlock = '<div class="block error"></div>';
+					var code = $('.score .code');
+					code.prepend(missBlock);
+					if (code.children().length > codeLimit) code.children().last().remove();
+				} else {
+					killGame();
+				}
 
 				createjs.Sound.play('bad');
 			}
@@ -205,9 +236,7 @@
 			    return uuid;
 			};
 
-			function toggleSound() {
-
-			}
+			function toggleSound() {}
 
 		</script>
     </head>
@@ -254,7 +283,7 @@
 				  </div>
 		  	  </div>
 			  <div class="controls">
-				  <button class="restart" onclick="restartGame()">Restart</button>
+				  <button class="restart" onclick="restartGame('genome1')">Restart</button>
 			  </div>
 		  </div>
   		</div>
