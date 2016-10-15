@@ -2,9 +2,9 @@
 
 ![Alt Text](http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
 
-##Problem presented/Challenge: general public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
+####Problem presented/Challenge: general public doesnt show interest in genomics due to technicisim and lack of basic knowldege.
 
-##Solution: Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring people into it.
+####Solution: Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring people into it.
 
 ![Alt Text] (https://66.media.tumblr.com/b5b8ef183bbf02fc98a3a21d99159dc1/tumblr_nw4yfqxSU71ubphlpo1_400.gif)
 
