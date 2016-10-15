@@ -72,6 +72,7 @@
         <script src="js/vendor/velocity.js"></script>
         <script src="js/vendor/jquery.color.js"></script>
         <script src="js/main.js"></script>
+		<script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
 		<script type="text/javascript">
 			var currentGenome, currentPointInGenome, currentLetter, speedLimiter, speedCounter, elements, currentScore, currentMisses;
 
@@ -88,6 +89,12 @@
 			var tolerance = 50; //tolerance in pixels... higher tolerance number is easier
 
 			$(document).ready( function() {
+				//load assets
+				createjs.Sound.registerSound("assets/gamestart.mp3", "gamestart");
+				createjs.Sound.registerSound("assets/good.mp3", "good");
+				createjs.Sound.registerSound("assets/bad.mp3", "bad");
+				//createjs.Sound.registerSound("assets/thunder.mp3", "win");
+				//createjs.Sound.registerSound("assets/thunder.mp3", "lose");
 				restartGame();
 			});
 
@@ -120,6 +127,8 @@
 
 				//setup key handlers
 				setupKeyHandlers();
+
+				createjs.Sound.play('gamestart'); //this needs to be ready...
 
 				//TODO add start animation???
 				gameClock = window.setInterval(nextTick, 500); //start game loop, run every 100ms
@@ -165,6 +174,7 @@
 						success = true;
 						currentScore++;
 						$('.score > .numbers').html(currentScore);
+						createjs.Sound.play('good');
 					}
 				}
 
@@ -223,6 +233,8 @@
 						$(this).animate({opacity:0}, 100, function(){ this.remove(); });
 					}
 				);
+
+				createjs.Sound.play('bad');
 			}
 
 			function guid() {
