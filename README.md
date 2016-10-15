@@ -19,3 +19,69 @@ DDR VISUALS
 INTERFACE FUNCTIONALLITY
 
 MUSIC PRODUCERS
+
+
+better:
+“Chord” DNA String (human)
+
+
+for each set of 4 letters 
+
+if first 2 letters are:
+GT
+GA
+then play Cdim
+
+if first 2 letters are:
+GC
+GG
+then play Daug
+
+if first 2 letters are:
+TT
+TA
+CT
+then play D#m
+
+if first 2 letters are:
+TC
+TG
+CA
+then play F#
+
+if first 2 letters are:
+AA
+AC
+then play F#Aug
+
+if first 2 letters are:
+AT
+AG
+then play G#
+
+if first 2 letters are:
+CC
+CG
+Then play: A#aug
+
+“melodic” DNA string
+embedded if for a different string input, based on each above chord  
+Melodic string
+for each 4 letters
+if
+G= base note (of chord arpeggio)
+if
+T = 2nd note(of chord arpeggio)
+if
+A = 3rd note( of chord arpeggio)
+if
+C = Octave/4th note if diminished/4 note chord structure( of chord arpeggio)
+
+
+“bass” DNA string note based on chord also,
+For each SET of 4 letters,
+if first letter is:
+G, then play basenote ( of chord arpeggio)
+T = 2nd note (of chord arpeggio)
+A = 3rd note(of chord arpeggio)
+C = Octave/4th note(of chord arpeggio)
