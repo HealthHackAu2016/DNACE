@@ -1,9 +1,11 @@
 # 🎶⚗️ DNACE ⚗️🎶
 
-![Alt Text](http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
+
 
 ###CHALLENGE TO BE SOLVED
 ####General public doesnt show interest in genomics due to technicisim and lack of basic knowldege 🤔
+
+![Alt Text] (http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
 
 ###💡 SOLUTION 💡
 ####Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic genomic concepts that would bring people into it.
