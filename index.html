@@ -149,7 +149,16 @@
 
 			function handleKeypress(letter) {
 				var hitbox = $('.hit-'+letter.toLowerCase());
+
 				//hitbox animation
+				$(hitbox).stop().animate(
+					{left:'-=10', top:'-=10',width:'+=20',height:'+=20'}, 50,
+					function() {
+						$(this).animate({left:'+=10', top:'+=10',width:'-=20',height:'-=20'}, 50);
+					}
+				);
+
+				//now map to elements
 				for (i in elements) {
 					var elem = elements[i];
 					if (elem.attr('type') == letter && withinTolerance(elem, hitbox)) {
@@ -222,7 +231,7 @@
         <![endif]-->
     <div class="jumbotron">
 		<div class="container-fluid">
-		  <div class="playarea col-xs-8">
+		  <div class="playarea col-sm-8">
 			  <div class="cols">
 				  <div class="col-a">
 					  <div class="hit-a hit-box" onclick="handleKeypress('A')">A</div>
@@ -238,7 +247,7 @@
 				  </div>
 			  </div>
 		  </div>
-		  <div class="sidebar col-xs-4">
+		  <div class="sidebar col-sm-4">
 			  <div class="title">
 				  <h1>DNACE</h1>
 			  </div>
