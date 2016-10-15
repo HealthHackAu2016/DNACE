@@ -16,38 +16,63 @@
 		<style>
 			html, body {
 				overflow: hidden;
+				color:#FFF;
 			}
+			button {
+				background-color: transparent;
+				appearance:none;
+				-webkit-appearance:none;
+				border:1px solid #FFF;
+			}
+
 			.jumbotron {
 				width:100vw;
 				height:100vh;
 				padding:0 !important;
 				margin:0 !important;
+				background-color:#000;
 			}
 			.cols {
 				text-align:center;
 				position:relative;
 			}
 			.cols > * {
-				width:40px;
 				display:inline-block;
 				margin-left: 10px;
 				margin-right: 10px;
 				height:100vh;
 			}
+			.cols > *, .block, .hit-box {
+				width:60px;
+			}
+			.block, .hit-box {
+				height:60px;
+				padding:15px;
+				font-size:20px;
+			}
 			.block {
 				position:absolute;
-				border:1px solid #000;
-				width:40px;
-				height:40px;
+				top:-80px;
+			}
+			/* COLORS: 23F0C7, 6457A6, 9DACFF, 76E5FC, 4BC0D9 */
+			.block[type=A] {
+				background-color:#23F0C7;
+			}
+			.block[type=T] {
+				background-color:#6457A6;
+			}
+			.block[type=G] {
+				background-color:#76E5FC;
+			}
+			.block[type=C] {
+				background-color:#9DACFF;
 			}
 			.hit-box {
 				position:absolute;
 				bottom:5vh;
 				text-align: center;
-				width:40px;
-				height:40px;
-				padding:10px;
-				border:1px solid #000;
+				border:1px solid #FFF;
+				z-index: 1000;
 			}
 
 			.sidebar {
@@ -84,8 +109,8 @@
 
 			var aKey = 37; //left
 			var tKey = 38; //up
-			var gKey = 39; //right
-			var cKey = 40; //down
+			var gKey = 40; //right
+			var cKey = 39; //down
 			var tolerance = 50; //tolerance in pixels... higher tolerance number is easier
 
 			$(document).ready( function() {
@@ -99,7 +124,6 @@
 				createjs.Sound.registerSound("assets/c.mp3", "c");
 				//createjs.Sound.registerSound("assets/win.mp3", "win");
 				//createjs.Sound.registerSound("assets/lost.mp3", "lose");
-
 				//restartGame();
 			});
 
@@ -184,11 +208,11 @@
 				}
 
 				//hitbox animation
-				var backgroundColor = '#AAA';
+				var backgroundColor = '#444';
 				if (success) backgroundColor = 'green';
 				$(hitbox).stop().animate(
 					{backgroundColor:backgroundColor}, 100,
-					function() {$(this).animate({backgroundColor:'#eee'}, 100);}
+					function() {$(this).animate({backgroundColor:'transparent'}, 100);}
 				);
 			}
 
@@ -214,9 +238,8 @@
 
 				//generate the block and animate downwards
 				var bodyHeight = $('body').height();
-				var uuid = guid();
 				var newBlock = $(blockHtml);
-				$(newBlock).attr('id',newBlock);
+				$(newBlock).attr('id',guid());
 				$(newBlock).attr('type',currentLetter);
 				$('.col-'+currentLetter.toLowerCase()).append(newBlock);
 				$(newBlock).animate({
@@ -245,14 +268,15 @@
 			}
 
 			function guid() {
-			  function s4() {
-			    return Math.floor((1 + Math.random()) * 0x10000)
-			      .toString(16)
-			      .substring(1);
-			  }
-			  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-			    s4() + '-' + s4() + s4() + s4();
-			}
+			    var d = new Date().getTime();
+			    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			        var r = (d + Math.random()*16)%16 | 0;
+			        d = Math.floor(d/16);
+			        return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+			    });
+			    return uuid;
+			};
+
 		</script>
     </head>
     <body>
@@ -280,6 +304,8 @@
 		  <div class="sidebar col-sm-4">
 			  <div class="title">
 				  <h1>DNACE</h1>
+			  </div>
+			  <div class="message">
 			  </div>
 		  	  <div class="score">
 				  <div class="numbers"></div>
