@@ -155,7 +155,7 @@ while (str.length >= "0") {
 
 ![Alt Text](http://bestanimations.com/Music/MirrorBalls/disco-dancing-animated-gif-3.gif)
 
-### If we played the whole human genome with the game tempo, it woukd take us 255 years to go through it 😱😱😱😱😱😱😱😱😱
+### If we played the whole human genome with the game tempo, it woukd take us 254 years to complete the game 😱😱😱😱😱😱😱😱😱
 
 [Link to GENOMIC BEAUTY!!! 👑👑👑] (https://youtu.be/yKW4F0Nu-UY)
 
