@@ -32,7 +32,7 @@
 
 The visuals were made with java script.
 
-![Alt Text](https://upload.wikimedia.org/wikipedia/en/2)
+![Alt Text](https://upload.wikimedia.org/wikipedia/en/2/20/SpaceInvaders-Gameplay.gif)
 
 ### HARDWARE
 
