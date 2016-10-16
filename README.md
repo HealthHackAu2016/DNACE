@@ -30,7 +30,9 @@
 
 ### DDR VISUALS 
 
-![Alt Text](https://upload.wikimedia.org/wikipedia/en/2/20/SpaceInvaders-Gameplay.gif)
+The visuals were made with java script.
+
+![Alt Text](https://upload.wikimedia.org/wikipedia/en/2)
 
 ### HARDWARE
 
@@ -48,6 +50,10 @@ To hack a keyboard:
 [Link to Hack a Keyboard ⌨️] (http://www.instructables.com/id/Hacking-a-USB-Keyboard/step1/Trace-the-letters-back-to-the-pins/)
 
 ### INTERFACE FUNCTIONALLITY
+
+Enjoy2 for MACOS
+
+[Link to Enjoy2] (https://github.com/fyhuang/enjoy2/blob/master/license.txt)
 
 
 
@@ -124,7 +130,7 @@ F#Aug: F, A, C#
 G#: G#, B#, D#, 
 A#: A#, C, E,
 
-’’’Rubby
+
 var sub1 = str.substring(4);
 while (str.length >= "0") {
   var sub = sub1.substring(2);
@@ -146,7 +152,7 @@ while (str.length >= "0") {
 
   var str = str.slice(4,str.length);
 }
-’’’
+
 
 ![Alt Text](http://bestanimations.com/Music/MirrorBalls/disco-dancing-animated-gif-3.gif)
 
