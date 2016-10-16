@@ -30,6 +30,8 @@ DDR will provide a sensory interactivity of combining science and dance-gaming t
 
 ### DDR VISUALS 
 
+![Alt Text](https://upload.wikimedia.org/wikipedia/en/2/20/SpaceInvaders-Gameplay.gif)
+
 ### HARDWARE
 
 Sylvan manage to get a contact in Clovely for the dance mats.
