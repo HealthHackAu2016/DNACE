@@ -71,6 +71,7 @@
 					createjs.Sound.stop();
 					//TODO play fail here...
 					$('.message').html('Too many errors - retry');
+					$('.sequences').show();
 				}
 			}
 
@@ -80,6 +81,9 @@
 			}
 
 			function initGame(genome) {
+				//hide stuff we dont need
+				$('.sequences').hide();
+
 				//set init vars here
 				bodyHeight = 0;
 				currentScore = 0;
@@ -256,13 +260,13 @@
 		  <div class="playarea col-sm-8">
 			  <div class="sequences">
 				  <div class="sequence" onclick="restartGame('genome1')">
-					  <div class="image"><img src="img/tomato.png"/></div>
-					  <div class="code"></div>
+					  <div class="image"><img src="img/tomato.jpg"/></div>
+					  <div class="code">Tomato</div>
 				  </div>
 				  <br>
 				  <div class="sequence" onclick="restartGame('genome2')">
-					  <div class="image"><img src="img/banana.png"/></div>
-					  <div class="code"></div>
+					  <div class="image"><img src="img/bananas.jpg"/></div>
+					  <div class="code">Banana</div>
 				  </div>
 			  </div>
 			  <div class="cols">
@@ -297,11 +301,11 @@
 					  <div class="block inactive"></div>
 				  </div>
 				  <div class="numbers">0</div>
-				  <div class="code">
-				  </div>
+				  <div class="code"></div>
 		  	  </div>
 			  <div class="controls">
-				  <button class="restart" onclick="restartGame('genome1')">Restart</button>
+				  Copyright &copy; DNART 2016<br>
+				  Released under MIT open source license
 			  </div>
 		  </div>
   		</div>
