@@ -124,6 +124,7 @@ F#Aug: F, A, C#
 G#: G#, B#, D#, 
 A#: A#, C, E,
 
+’’’Rubby
 var sub1 = str.substring(4);
 while (str.length >= "0") {
   var sub = sub1.substring(2);
@@ -145,6 +146,7 @@ while (str.length >= "0") {
 
   var str = str.slice(4,str.length);
 }
+’’’
 
 ![Alt Text](http://bestanimations.com/Music/MirrorBalls/disco-dancing-animated-gif-3.gif)
 
