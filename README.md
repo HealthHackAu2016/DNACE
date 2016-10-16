@@ -3,7 +3,7 @@
 
 
 ###CHALLENGE TO BE SOLVED
-####General public doesnt show interest in genomics due to technicisim and lack of basic knowldege 🤔
+####General public doesn't show an interest in genomics due to a lack of engagement and basic knowldege 🤔
 
 ![Alt Text] (http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
 
