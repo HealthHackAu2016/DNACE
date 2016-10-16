@@ -39,7 +39,7 @@ The keyboard hack was attempted but the existing solution of the dance REDOCTANE
 
 Sylvan manage to get a contact in Clovely for the dance mats.
 
-![Alt Text] (https://github.com/HealthHackAu2016/DNACE/blob/master/IMG_0340.PNG?raw=true)
+![Alt Text] (https://cloud.githubusercontent.com/assets/22849604/19414444/4a00d336-9399-11e6-95b9-8f114ac212f9.JPG)
 
 The other option would be to hack a keyboard:
 
