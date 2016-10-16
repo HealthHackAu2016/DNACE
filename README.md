@@ -34,6 +34,9 @@
 
 ### HARDWARE
 
+Sylvan had a idea to include LED strip to represent a strand of DNA however brainstorming suggested to include music and movement with the final prototype being a similar to the game "DANCE DANCE REVOLUTION" 💃💃💃 to implement the dance steps we considered an existing solution or a keyboard ha
+The keyboard hack was attempted but the existing solution of the dance REDOCTANE pad was purchased (costs rrp $100 per pad but we found one in gumtree for $30 for 2 pads 🎉🎉🎉)
+
 Sylvan manage to get a contact in Clovely for the dance mats.
 
 ![Alt Text] (https://github.com/HealthHackAu2016/DNACE/blob/master/IMG_0340.PNG?raw=true)
@@ -52,6 +55,16 @@ The other option would be to hack a keyboard:
 
 
 ### MUSIC PRODUCTION
+
+The music has been composed algoritmically according to the DNA sequence. 
+
+The permutations of the 2 first letter in a set of 4 letters mapped onto one of 6 cords of the enigmatig D-scale, which is an interesting and unique music scale. 
+
+Chords are determined by a data seet of DNA sequence.
+
+The ambient melody takes 4 letters of another sequence provided by another data set and maps each letter to a note in the arpegio of the chord which was determined by the first data set.
+
+Angela has hacked the CSV to midi source chors such that we translate DNA into music format.
 
 “Chord” DNA String (human) for each set of 4 letters if first 2 letters are:
 GT
@@ -93,22 +106,13 @@ Then play: A#aug
 “melodic” DNA string embedded if for a different string input, based on each above chord  
 Melodic string for each 4 letters
 if
-G= base note (of chord arpeggio)
+A= base note (of chord arpeggio)
 if
-T = 2nd note(of chord arpeggio)
+G = 2nd note(of chord arpeggio)
 if
-A = 3rd note( of chord arpeggio)
+T = 3rd note( of chord arpeggio)
 if
 C = Octave/4th note if diminished/4 note chord structure( of chord arpeggio)
-
-
-“bass” DNA string note based on chord also,
-For each SET of 4 letters,
-if first letter is:
-G, then play basenote ( of chord arpeggio)
-T = 2nd note (of chord arpeggio)
-A = 3rd note(of chord arpeggio)
-C = Octave/4th note(of chord arpeggio)
 
 Notes(ascending arpeggios) that comprise chords:
 C dim: C, Eb, Gb
@@ -142,3 +146,7 @@ while (str.length >= "0") {
 }
 
 ![Alt Text](http://bestanimations.com/Music/MirrorBalls/disco-dancing-animated-gif-3.gif)
+
+[Link to GENOMICS BEAUTY!!! 👑👑👑] (https://youtu.be/yKW4F0Nu-UY)
+
+![Alt Text](http://www.rivercitylabs.net/wp-content/uploads/2015/10/health-hack.png)
