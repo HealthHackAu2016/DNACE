@@ -30,7 +30,7 @@
 
 ### DDR VISUALS 
 
-The visuals were made with java script.
+The visuals were made with java script based on SPACE INVADERS game.
 
 ![Alt Text](https://upload.wikimedia.org/wikipedia/en/2/20/SpaceInvaders-Gameplay.gif)
 
