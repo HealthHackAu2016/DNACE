@@ -1,0 +1,7 @@
+Thank you for checking out our repo. In order to make this work, follow the steps below:
+
+- Download the midi to CSV converter
+http://www.penguinpeepshow.com/programs/csv-to-midi-converter/
+
+- Drop convertGATACA.java into the CSV2MIDI folder
+- Follow the instructions in MessageInfo text
