@@ -34,14 +34,15 @@
 
 ### HARDWARE
 
-Sylvan had a idea to include LED strip to represent a strand of DNA however brainstorming suggested to include music and movement with the final prototype being a similar to the game "DANCE DANCE REVOLUTION" 💃💃💃 to implement the dance steps we considered an existing solution or a keyboard ha
+Sylvan had a idea to include LED strip to represent a strand of DNA however brainstorming suggested to include music and movement with the final prototype being a similar to the game "DANCE DANCE REVOLUTION" 💃💃💃 
+To implement the dance steps we considered an existing solution or hacking keyboard.
 The keyboard hack was attempted but the existing solution of the dance REDOCTANE pad was purchased (costs rrp $100 per pad but we found one in gumtree for $30 for 2 pads 🎉🎉🎉)
 
 Sylvan manage to get a contact in Clovely for the dance mats.
 
-![Alt Text] (https://github.com/HealthHackAu2016/DNACE/blob/master/IMG_0340.PNG?raw=true)
+![Alt Text] (https://cloud.githubusercontent.com/assets/22849604/19414444/4a00d336-9399-11e6-95b9-8f114ac212f9.JPG)
 
-The other option would be to hack a keyboard:
+To hack a keyboard:
 
 
 [Link to Hack a Keyboard ⌨️] (http://www.instructables.com/id/Hacking-a-USB-Keyboard/step1/Trace-the-letters-back-to-the-pins/)
