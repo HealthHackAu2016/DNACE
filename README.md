@@ -10,9 +10,9 @@
 ###💡 SOLUTION 💡
 ####Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic concepts that would bring people into it. This will create awareness of a biomedical field that is emerging and would benefit the public.
 
-DDR will provide a sensory interactivity of combining science and dance-gaming to engage public with Genomics.
+####DDR will provide a sensory interactivity of combining science and dance-gaming to engage public in Genomics.
 
-####DnACE will make you to experience the DNA 😎
+###DnACE will make you to experience the DNA 😎 👯💥💥💥💥
 
 ![Alt Text] (https://66.media.tumblr.com/b5b8ef183bbf02fc98a3a21d99159dc1/tumblr_nw4yfqxSU71ubphlpo1_400.gif)
 
