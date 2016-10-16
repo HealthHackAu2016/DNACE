@@ -3,12 +3,12 @@
 
 
 ###CHALLENGE TO BE SOLVED
-####General public doesn't show an interest in genomics due to a lack of engagement and basic knowldege 🤔
+####The general public doesn't show an interest in genomics due to a lack of engagement and basic knowldege 🤔
 
 ![Alt Text] (http://destinhaus.com/wp-content/uploads/2015/10/genomic_sequencing_usamriid.jpg)
 
 ###💡 SOLUTION 💡
-####Provide a DDR (Dance Dance Revolution) experience based on genomics that attracts public and provides basic concepts that would bring people into it. This will create awareness of a biomedical field that is emerging and would benefit the public.
+####Provide a DDR (Dance Dance Revolution) experience using music comosed by DNA that attracts public and provides basic concepts that would bring people together. This will create awareness of the field of genomics that is emerging and will benefit the public.
 
 ####DDR will provide a sensory interactivity of combining science and dance-gaming to engage public in Genomics.
 
