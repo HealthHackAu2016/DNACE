@@ -12,6 +12,8 @@
 
 ####DDR will provide an interactive, multi-sensory experience, by combining science and dance-gaming to engage the public in Genomics.
 
+![Alt Text](https://raw.githubusercontent.com/HealthHackAu2016/DNACE/fd13062d8f87f699499b953d17839716c333ce00/IMG_0358.PNG)
+
 ###DnACE will make you to experience the DNA 😎 👯💥💥💥💥
 
 ![Alt Text] (https://66.media.tumblr.com/b5b8ef183bbf02fc98a3a21d99159dc1/tumblr_nw4yfqxSU71ubphlpo1_400.gif)
