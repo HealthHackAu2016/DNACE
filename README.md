@@ -153,6 +153,6 @@ while (str.length >= "0") {
 
 ![Alt Text](http://bestanimations.com/Music/MirrorBalls/disco-dancing-animated-gif-3.gif)
 
-[Link to GENOMICS BEAUTY!!! 👑👑👑] (https://youtu.be/yKW4F0Nu-UY)
+[Link to GENOMIC BEAUTY!!! 👑👑👑] (https://youtu.be/yKW4F0Nu-UY)
 
 ![Alt Text](http://www.rivercitylabs.net/wp-content/uploads/2015/10/health-hack.png)
