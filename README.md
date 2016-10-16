@@ -22,7 +22,7 @@
 
 ####_Elise & Sylvain = Creating DDR visuals. User interface development based in user experience (USUI) and associated hardware (existing dance mats) 👀_
 
-####_James H = Interface functuallity. Xx developing? flow, stream reading and key events 💻_
+####_James H = Interface functuallity. Development of visuals, flow, stream reading and key events 💻_
 
 ####_Louis & Angela = _Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords 🎶_
 
@@ -54,9 +54,6 @@ To hack a keyboard:
 Enjoy2 for MACOS
 
 [Link to Enjoy2] (https://github.com/fyhuang/enjoy2/blob/master/license.txt)
-
-
-
 
 
 
