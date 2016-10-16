@@ -53,6 +53,14 @@ The other option would be to hack a keyboard:
 
 ### MUSIC PRODUCTION
 
+The music has been composed algoritmically according to the DNA sequence. 
+
+The permutations of the 2 first letter in a set of 4 letters mapped onto one of 6 cords of the enigmatig D-scale, which is an interesting and unique music scale. 
+
+Chords are determined by a data seet of DNA sequence.
+
+The ambient melody takes 4 letters of another sequence provided by another data set and maps each letter to a note in the arpegio of the chord which was determined by the first data set.
+
 “Chord” DNA String (human) for each set of 4 letters if first 2 letters are:
 GT
 GA
