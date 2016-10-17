@@ -28,7 +28,7 @@
 
 ####_Louis & Angela = _Music producers. Establish the relationship between the cords and the base pairs to create a melody. Getting the DNA string from a database and reading that into different chords 🎶_
 
-####_Araitz = Connecting work 😜_
+####_Araitz = Connecting work & GitHub 😜_
 
 ### DDR VISUALS 
 
